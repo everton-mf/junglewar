@@ -35,7 +35,7 @@ PLAYER_KEY_LEFT = {'Player1': pygame.K_LEFT,
                    'Player2': pygame.K_a}
 PLAYER_KEY_RIGHT = {'Player1': pygame.K_RIGHT,
                     'Player2': pygame.K_d}
-PLAYER_KEY_SHOOT = {'Player1': pygame.K_PRINT,
+PLAYER_KEY_SHOOT = {'Player1': pygame.K_p,
                     'Player2': pygame.K_RCTRL}
 
 EVENTY_ENEMY= pygame.USEREVENT + 1
@@ -48,5 +48,12 @@ ENTITY_HEALTH = {
     'Player1': 200,
     'Player2': 200,
     'Enemy1' : 100,
-    'Enemy2': 100
+    'Enemy2': 100,
+    'Player1Shot': 1,
+    'Player2Shot': 1
+}
+
+ENTITY_SHOT_DELAY = {
+    'Player1': 20,
+    'Player2': 20
 }
