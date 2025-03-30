@@ -7,7 +7,7 @@ import pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Consty import C_WHITE, WIN_WIDTH, WIN_HEIGHT, MENU_OPTION, EVENTY_ENEMY
+from code.Consty import C_WHITE, WIN_WIDTH, WIN_HEIGHT, MENU_OPTION, EVENTY_ENEMY, C_GREY
 from code.enemy import Enemy
 from code.entity import Entity
 from code.entityFactory import EntityFactory
@@ -40,9 +40,16 @@ class Level:
                 if isinstance(ent, (Player, Enemy)):
                     shoot = ent.shoot()
                     if shoot is not None:
-                        self.entity_list.append(shoot
+                        self.entity_list.append(shoot)
+                if ent.name == 'Player1':
+                    self.level_text(14, f'Player1 - Health:{ent.health}', C_GREY, (10, 25))
+                if ent.name == 'Player2':
+                    self.level_text(14, f'Player2 - Health:{ent.health}', C_GREY, (10, 45))
+                if ent.name == 'Player1':
+                    self.level_text(14, f'Score:{ent.score}', C_GREY, (190, 25))
+                if ent.name == 'Player2':
+                    self.level_text(14, f'Score:{ent.score}', C_GREY, (190, 45))
 
-                                                )
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
