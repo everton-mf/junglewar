@@ -40,7 +40,7 @@ PLAYER_KEY_LEFT = {'Player1': pygame.K_LEFT,
                    'Player2': pygame.K_a}
 PLAYER_KEY_RIGHT = {'Player1': pygame.K_RIGHT,
                     'Player2': pygame.K_d}
-PLAYER_KEY_SHOOT = {'Player1': pygame.K_p,
+PLAYER_KEY_SHOOT = {'Player1': pygame.K_SPACE,
                     'Player2': pygame.K_LCTRL}
 
 EVENTY_ENEMY = pygame.USEREVENT + 1
@@ -54,8 +54,8 @@ ENTITY_HEALTH = {
     'Level2Bg1': 999,
     'Level2Bg2': 999,
     'Level2Bg3': 999,
-    'Player1': 200,
-    'Player2': 200,
+    'Player1': 300,
+    'Player2': 300,
     'Enemy1': 50,
     'Enemy2': 60,
     'Player1Shot': 1,
@@ -92,7 +92,6 @@ ENTITY_DAMAGE = {
 
 }
 
-
 ENTITY_SCORE = {
     'Level1Bg0': 0,
     'Level1Bg1': 0,
@@ -126,4 +125,4 @@ SCORE_POS = {'Title': (WIN_WIDTH / 2, 50),
              4: (WIN_WIDTH / 2, 190),
              5: (WIN_WIDTH / 2, 210)
 
-}
+             }

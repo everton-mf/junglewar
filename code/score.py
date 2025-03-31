@@ -9,9 +9,6 @@ from code.Consty import C_PURPLE, SCORE_POS, MENU_OPTION, C_GREY, C_ORANGE
 from code.DBproxy import DBProxy
 
 
-
-
-
 class Score:
 
     def __init__(self, window: Surface):
@@ -47,7 +44,7 @@ class Score:
                     sys.exit()
                 elif event.type == KEYDOWN:
                     if event.key == K_RETURN and len(name) == 4:
-                        db_proxy.save({'name': name, 'score': score, 'date':get_formatted_date()})
+                        db_proxy.save({'name': name, 'score': score, 'date': get_formatted_date()})
                         self.show_score()
                         return
                     elif event.key == K_BACKSPACE:
@@ -92,6 +89,7 @@ class Score:
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(center=text_center_pos)
         self.window.blit(source=text_surf, dest=text_rect)
+
 
 def get_formatted_date():
     current_datetime = datetime.now()
